@@ -1,19 +1,19 @@
-# 🕹️ MazeSync
+# MazeSync
 
 Controle interativo em tempo real de um labirinto mecânico físico utilizando comunicação via rede sem fio entre um microcontrolador e um smartphone. 
 
 Este repositório adota a arquitetura de **Monorepo**, contendo tanto o código embarcado (Hardware) quanto o aplicativo móvel (Software).
 
-## 📐 Arquitetura do Sistema
+## Arquitetura do Sistema
 
 O sistema é dividido em duas frentes que se comunicam via protocolo **UDP** em uma rede local (Access Point gerado pelo hardware), garantindo baixíssima latência (aprox. 15ms) para movimentação fluida.
 
-1. **📱 App Android (Kotlin):** Lê os sensores de gravidade do smartphone utilizando a *Sensor API* nativa do Android SDK e atira pacotes UDP em uma *Thread* paralela (Background) contendo as coordenadas $X$ e $Y$.
-2. **⚙️ Hardware (C++ / ESP32):** Microcontrolador recebe os pacotes de rede e traduz os ângulos em modulação PWM para controlar os micro-servos do labirinto. Também inclui lógica de interpolação para controle manual via Joystick analógico.
+1. **App Android (Kotlin):** Lê os sensores de gravidade do smartphone utilizando a *Sensor API* nativa do Android SDK e atira pacotes UDP em uma *Thread* paralela (Background) contendo as coordenadas $X$ e $Y$.
+2. **Hardware (C++ / ESP32):** Microcontrolador recebe os pacotes de rede e traduz os ângulos em modulação PWM para controlar os micro-servos do labirinto. Também inclui lógica de interpolação para controle manual via Joystick analógico.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 * **Linguagens:** Kotlin (App), C/C++ (Hardware)
 * **Ambientes:** Android Studio, VS Code (PlatformIO)
@@ -22,7 +22,7 @@ O sistema é dividido em duas frentes que se comunicam via protocolo **UDP** em 
 
 ---
 
-## 🚀 HOW TO: Como executar o projeto
+## HOW TO: Como executar o projeto
 
 ### Pré-requisitos
 * **Android Studio** instalado para compilar o app.
@@ -47,7 +47,7 @@ O sistema é dividido em duas frentes que se comunicam via protocolo **UDP** em 
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Danilo Pietrobon Neto** Engenharia de Computação - UTFPR
 **Monica P. O. Mackert**  Engenharia de Computação - UTFPR
